@@ -4,6 +4,8 @@ Knowledge base template for Jekyll. Browse through a [live demo](https://orange-
 
 ![Base template screenshot](images/_screenshot.png)
 
+
+
 Base was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
 Find more templates and themes at [Jekyll Tips](https://learn.cloudcannon.com/jekyll-templates/).
 
