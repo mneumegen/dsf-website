@@ -1,25 +1,55 @@
----
----
-<section class="categories">
-	{% assign categories = site.categories | sort %}
-	{% for category in categories %}
-		{% assign name = category[0] %}
-		{% assign posts = category[1] %}
-		{% assign size = posts | size %}
-		<section class="category">
-				<h3>
-					<a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ name | replace: "-", " " }}</a>
-				</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mike Neumegen</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css' />
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
 
-			<ul>
-				{% assign tutorials = posts | sort: "title" %}
-				{% for tutorial in tutorials limit: 4 %}
-					<li><a href="{{ site.baseurl }}{{ tutorial.url }}">{% include document-icon.html icon=tutorial.type %}{{ tutorial.title }}</a></li>
-				{% endfor %}
-				{% if size > 4 %}
-					<li><a href="{{ site.baseurl }}/category/{{ name | slugify }}/">{{ size | minus: 4 }} more...</a></li>
-				{% endif %}
-			</ul>
-		</section>
-	{% endfor %}
-</section>
+  <script src="/js/jquery.js"></script>
+  <!-- // <script src="/js/main.js"></script> -->
+</head>
+<body class="landing-page" data-cms-content-wrapper="/_layouts/default.html">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://malsup.github.io/jquery.cycle2.js"></script>
+
+
+<h1 class="editable" data-cms-source="/index.html" data-cms-index="0"> Mike Neumegen </h1>
+
+<ul class="links">
+  <li><a target="_blank" href="http://cloudcannon.com">CloudCannon</a></li>
+  <li><a target="_blank" href="https://www.facebook.com/mikeneumegen">Photography</a></li>
+  <li><a target="_blank" href="https://twitter.com/mikeneumegen">Twitter</a></li>
+</ul>
+
+<ul class="gallery cycle-slideshow" data-cycle-slides="li">
+  
+    <li style="background-image: url(/images/3.jpg)"><span>Floating Market / Bangkok, Thailand</span></li>
+  
+    <li style="background-image: url(/images/2.jpg)"><span>Boy popping bubble / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/1.jpg)"><span>Sunrise over Harbour / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/4.jpg)"><span>Jeremy / Sydney, Australia</span></li>
+  
+    <li style="background-image: url(/images/6.jpg)"><span>Sunrise / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/7.jpg)"><span>Bonney / London, UK</span></li>
+  
+    <li style="background-image: url(/images/5.jpg)"><span>The streets / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/10016890156_822c57c966_k.jpg)"><span>Georgia / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/8.jpg)"><span>Nugget point / Catlins, NZ</span></li>
+  
+    <li style="background-image: url(/images/9.jpg)"><span>The Ruby Lady / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/10.jpg)"><span>Chloe / Dunedin, NZ</span></li>
+  
+    <li style="background-image: url(/images/11.jpg)"><span>The River Jesters / Christchurch, NZ</span></li>
+  
+</ul>
+ 
+</body>
+</html>
